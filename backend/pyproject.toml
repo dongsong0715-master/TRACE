@@ -27,7 +27,7 @@ include = ["app*", "scripts*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-addopts = "-q --basetemp=.pytest_cache/tmp"
+addopts = "-q --basetemp=.pytest_tmp"
 
 [tool.ruff]
 target-version = "py312"
