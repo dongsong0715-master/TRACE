@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "version": "cases-v1",
+  "is_demo": true,
+  "notice": "确定性样例仅用于功能校验；应用测试与真实API效果尚需实际执行。",
+  "cases": [
+    {
+      "id": "C01",
+      "kind": "diagnosis",
+      "profile_code": "PROFILE-1-1",
+      "expected": {
+        "technical": 40.0,
+        "project": 66.7,
+        "expression": 33.3,
+        "learning": 100.0
+      }
+    },
+    {
+      "id": "C02",
+      "kind": "diagnosis",
+      "profile_code": "PROFILE-1-2",
+      "expected": {
+        "technical": 80.0,
+        "project": 100.0,
+        "expression": 66.7,
+        "learning": 100.0
+      }
+    },
+    {
+      "id": "C03",
+      "kind": "diagnosis_invalid",
+      "mutation": {
+        "Q04.python": 4
+      },
+      "expected": "reject_out_of_range"
+    },
+    {
+      "id": "C04",
+      "kind": "diagnosis_invalid",
+      "mutation": {
+        "remove": "Q05"
+      },
+      "expected": "incomplete_no_final_score"
+    },
+    {
+      "id": "C05",
+      "kind": "score_formula",
+      "input": {
+        "semantic": 0.8,
+        "skill_match": 0.5,
+        "city_match": 1
+      },
+      "expected": 73.0
+    },
+    {
+      "id": "C06",
+      "kind": "recommendation_response_invalid",
+      "allowed_job_ids": [
+        "1"
+      ],
+      "allowed_chunk_ids": [
+        "10"
+      ],
+      "mock_response": {
+        "items": [
+          {
+            "job_id": "2",
+            "reason": "其他岗位",
+            "matched_skills": [],
+            "gap_skills": [],
+            "evidence_chunk_ids": [
+              "999"
+            ]
+          }
+        ]
+      },
+      "expected": "fallback"
+    },
+    {
+      "id": "C07",
+      "kind": "interview_dimension_formula",
+      "input": {
+        "accuracy": 80,
+        "coverage": 70,
+        "clarity": 90
+      },
+      "expected": 79.0
+    },
+    {
+      "id": "C08",
+      "kind": "interview_average",
+      "input": [
+        79,
+        70,
+        60,
+        80,
+        0
+      ],
+      "expected": 57.8
+    },
+    {
+      "id": "C09",
+      "kind": "interview_response_invalid",
+      "mock_response": {
+        "scores": [
+          {
+            "turn_no": 1,
+            "accuracy": 120,
+            "coverage": 80,
+            "clarity": 80
+          }
+        ]
+      },
+      "expected": "failed_total_null"
+    },
+    {
+      "id": "C10",
+      "kind": "provider_response_invalid",
+      "raw_text": "not JSON",
+      "expected": "schema_validation_failed"
+    },
+    {
+      "id": "C11",
+      "kind": "interview_all_skipped",
+      "input": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected": {
+        "total_score": 0,
+        "report_mode": "all_skipped",
+        "ai_calls": 0
+      }
+    },
+    {
+      "id": "C12",
+      "kind": "idempotency",
+      "operation": "favorite_same_job_twice",
+      "expected_rows": 1
+    },
+    {
+      "id": "C13",
+      "kind": "idempotency",
+      "operation": "application_same_job_twice",
+      "expected_rows": 1
+    },
+    {
+      "id": "C14",
+      "kind": "authorization",
+      "operation": "student_A_reads_student_B_report",
+      "expected_http": 404
+    }
+  ]
+}

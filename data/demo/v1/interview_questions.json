@@ -1,0 +1,723 @@
+[
+  {
+    "code": "Q-PYTHON-001",
+    "category": "python",
+    "difficulty": 1,
+    "prompt": "Python列表和元组有哪些区别，分别适合什么场景？",
+    "reference_answer": "列表可变，元组不可变；根据是否需要修改选择；元组元素本身仍可能引用可变对象。",
+    "rubric": {
+      "expected_points": [
+        "可变性",
+        "使用场景",
+        "边界"
+      ],
+      "dimensions": [
+        "accuracy",
+        "coverage",
+        "clarity"
+      ],
+      "guidance": "接受意思一致的正确表达，不按是否逐字命中关键词机械评分"
+    },
+    "question_version": "question-v1",
+    "dataset_version": "demo-v1",
+    "is_active": true,
+    "is_demo": true
+  },
+  {
+    "code": "Q-PYTHON-002",
+    "category": "python",
+    "difficulty": 1,
+    "prompt": "如何捕获文件读取异常并保证文件关闭？",
+    "reference_answer": "使用with管理文件；针对可预期异常捕获并给出信息；不要用空except吞掉所有错误。",
+    "rubric": {
+      "expected_points": [
+        "with",
+        "异常类型",
+        "资源释放"
+      ],
+      "dimensions": [
+        "accuracy",
+        "coverage",
+        "clarity"
+      ],
+      "guidance": "接受意思一致的正确表达，不按是否逐字命中关键词机械评分"
+    },
+    "question_version": "question-v1",
+    "dataset_version": "demo-v1",
+    "is_active": true,
+    "is_demo": true
+  },
+  {
+    "code": "Q-PYTHON-003",
+    "category": "python",
+    "difficulty": 1,
+    "prompt": "SQL中WHERE和HAVING分别在什么阶段筛选？",
+    "reference_answer": "WHERE筛选原始行，HAVING通常筛选分组聚合后的结果；举分组计数的例子。",
+    "rubric": {
+      "expected_points": [
+        "行筛选",
+        "分组",
+        "聚合"
+      ],
+      "dimensions": [
+        "accuracy",
+        "coverage",
+        "clarity"
+      ],
+      "guidance": "接受意思一致的正确表达，不按是否逐字命中关键词机械评分"
+    },
+    "question_version": "question-v1",
+    "dataset_version": "demo-v1",
+    "is_active": true,
+    "is_demo": true
+  },
+  {
+    "code": "Q-PYTHON-004",
+    "category": "python",
+    "difficulty": 1,
+    "prompt": "Git提交前你会检查什么，如何理解commit？",
+    "reference_answer": "检查diff和敏感信息，运行相关验证；commit是提交快照及说明，不等于已经推送远端。",
+    "rubric": {
+      "expected_points": [
+        "检查变更",
+        "提交快照",
+        "推送区别"
+      ],
+      "dimensions": [
+        "accuracy",
+        "coverage",
+        "clarity"
+      ],
+      "guidance": "接受意思一致的正确表达，不按是否逐字命中关键词机械评分"
+    },
+    "question_version": "question-v1",
+    "dataset_version": "demo-v1",
+    "is_active": true,
+    "is_demo": true
+  },
+  {
+    "code": "Q-PYTHON-005",
+    "category": "python",
+    "difficulty": 2,
+    "prompt": "设计一个新增课程的HTTP接口，需要校验哪些输入？",
+    "reference_answer": "校验必填、类型、长度及唯一性；检查权限；明确成功与错误响应；数据库约束防重复。",
+    "rubric": {
+      "expected_points": [
+        "输入校验",
+        "权限",
+        "唯一约束"
+      ],
+      "dimensions": [
+        "accuracy",
+        "coverage",
+        "clarity"
+      ],
+      "guidance": "接受意思一致的正确表达，不按是否逐字命中关键词机械评分"
+    },
+    "question_version": "question-v1",
+    "dataset_version": "demo-v1",
+    "is_active": true,
+    "is_demo": true
+  },
+  {
+    "code": "Q-PYTHON-006",
+    "category": "python",
+    "difficulty": 2,
+    "prompt": "一次接口请求要修改两张表，怎样避免只改成功一张？",
+    "reference_answer": "用同一数据库事务处理相关写入，异常回滚；外部网络调用不应占用长事务。",
+    "rubric": {
+      "expected_points": [
+        "事务",
+        "回滚",
+        "事务边界"
+      ],
+      "dimensions": [
+        "accuracy",
+        "coverage",
+        "clarity"
+      ],
+      "guidance": "接受意思一致的正确表达，不按是否逐字命中关键词机械评分"
+    },
+    "question_version": "question-v1",
+    "dataset_version": "demo-v1",
+    "is_active": true,
+    "is_demo": true
+  },
+  {
+    "code": "Q-PYTHON-007",
+    "category": "python",
+    "difficulty": 2,
+    "prompt": "如何定位一个查询接口变慢的问题？",
+    "reference_answer": "先测耗时定位层次，检查SQL和执行计划、索引与数据量，再验证优化前后结果及耗时。",
+    "rubric": {
+      "expected_points": [
+        "测量",
+        "执行计划",
+        "复测"
+      ],
+      "dimensions": [
+        "accuracy",
+        "coverage",
+        "clarity"
+      ],
+      "guidance": "接受意思一致的正确表达，不按是否逐字命中关键词机械评分"
+    },
+    "question_version": "question-v1",
+    "dataset_version": "demo-v1",
+    "is_active": true,
+    "is_demo": true
+  },
+  {
+    "code": "Q-PYTHON-008",
+    "category": "python",
+    "difficulty": 2,
+    "prompt": "为什么重试创建订单可能产生重复记录，如何处理？",
+    "reference_answer": "网络响应丢失不代表未创建；使用幂等键与唯一约束，重复请求返回原结果。",
+    "rubric": {
+      "expected_points": [
+        "重试语义",
+        "幂等键",
+        "唯一约束"
+      ],
+      "dimensions": [
+        "accuracy",
+        "coverage",
+        "clarity"
+      ],
+      "guidance": "接受意思一致的正确表达，不按是否逐字命中关键词机械评分"
+    },
+    "question_version": "question-v1",
+    "dataset_version": "demo-v1",
+    "is_active": true,
+    "is_demo": true
+  },
+  {
+    "code": "Q-PYTHON-009",
+    "category": "python",
+    "difficulty": 3,
+    "prompt": "设计一个保存答卷再调用AI评分的简单流程。",
+    "reference_answer": "先持久化答案和调用状态，设置超时，校验输出再保存；失败保留答案，重复请求检查状态。",
+    "rubric": {
+      "expected_points": [
+        "持久化",
+        "超时",
+        "校验",
+        "幂等"
+      ],
+      "dimensions": [
+        "accuracy",
+        "coverage",
+        "clarity"
+      ],
+      "guidance": "接受意思一致的正确表达，不按是否逐字命中关键词机械评分"
+    },
+    "question_version": "question-v1",
+    "dataset_version": "demo-v1",
+    "is_active": true,
+    "is_demo": true
+  },
+  {
+    "code": "Q-PYTHON-010",
+    "category": "python",
+    "difficulty": 3,
+    "prompt": "岗位内容更新后，如何避免RAG返回旧岗位证据？",
+    "reference_answer": "保存正文和索引版本，重建新索引；检索后按当前岗位版本和有效状态过滤，成功后切换。",
+    "rubric": {
+      "expected_points": [
+        "版本",
+        "过滤",
+        "索引切换"
+      ],
+      "dimensions": [
+        "accuracy",
+        "coverage",
+        "clarity"
+      ],
+      "guidance": "接受意思一致的正确表达，不按是否逐字命中关键词机械评分"
+    },
+    "question_version": "question-v1",
+    "dataset_version": "demo-v1",
+    "is_active": true,
+    "is_demo": true
+  },
+  {
+    "code": "Q-FRONTEND-001",
+    "category": "frontend",
+    "difficulty": 1,
+    "prompt": "JavaScript的let与const有什么区别？",
+    "reference_answer": "二者有块级作用域；const禁止重新绑定，不保证对象内部不可变；按是否重新赋值选择。",
+    "rubric": {
+      "expected_points": [
+        "作用域",
+        "重新绑定",
+        "对象可变"
+      ],
+      "dimensions": [
+        "accuracy",
+        "coverage",
+        "clarity"
+      ],
+      "guidance": "接受意思一致的正确表达，不按是否逐字命中关键词机械评分"
+    },
+    "question_version": "question-v1",
+    "dataset_version": "demo-v1",
+    "is_active": true,
+    "is_demo": true
+  },
+  {
+    "code": "Q-FRONTEND-002",
+    "category": "frontend",
+    "difficulty": 1,
+    "prompt": "如何让网页表单标签与输入框正确关联？",
+    "reference_answer": "使用label和匹配的for/id，选择适当输入类型，展示可理解错误并支持键盘操作。",
+    "rubric": {
+      "expected_points": [
+        "label",
+        "输入类型",
+        "可访问性"
+      ],
+      "dimensions": [
+        "accuracy",
+        "coverage",
+        "clarity"
+      ],
+      "guidance": "接受意思一致的正确表达，不按是否逐字命中关键词机械评分"
+    },
+    "question_version": "question-v1",
+    "dataset_version": "demo-v1",
+    "is_active": true,
+    "is_demo": true
+  },
+  {
+    "code": "Q-FRONTEND-003",
+    "category": "frontend",
+    "difficulty": 1,
+    "prompt": "Vue列表渲染为什么需要稳定的key？",
+    "reference_answer": "key标识列表项身份，帮助正确复用节点；排序变化时不宜把索引当稳定业务ID。",
+    "rubric": {
+      "expected_points": [
+        "身份",
+        "节点复用",
+        "排序"
+      ],
+      "dimensions": [
+        "accuracy",
+        "coverage",
+        "clarity"
+      ],
+      "guidance": "接受意思一致的正确表达，不按是否逐字命中关键词机械评分"
+    },
+    "question_version": "question-v1",
+    "dataset_version": "demo-v1",
+    "is_active": true,
+    "is_demo": true
+  },
+  {
+    "code": "Q-FRONTEND-004",
+    "category": "frontend",
+    "difficulty": 1,
+    "prompt": "TypeScript接口在运行时会自动校验API响应吗？",
+    "reference_answer": "类型主要用于编译期，不能代替运行时校验；接收外部数据仍需要检查或Schema。",
+    "rubric": {
+      "expected_points": [
+        "编译期",
+        "运行时",
+        "外部数据"
+      ],
+      "dimensions": [
+        "accuracy",
+        "coverage",
+        "clarity"
+      ],
+      "guidance": "接受意思一致的正确表达，不按是否逐字命中关键词机械评分"
+    },
+    "question_version": "question-v1",
+    "dataset_version": "demo-v1",
+    "is_active": true,
+    "is_demo": true
+  },
+  {
+    "code": "Q-FRONTEND-005",
+    "category": "frontend",
+    "difficulty": 2,
+    "prompt": "一个岗位列表页应有哪些加载和失败状态？",
+    "reference_answer": "区分加载、成功有数据、空结果和请求失败，保留筛选条件，失败提供重试入口。",
+    "rubric": {
+      "expected_points": [
+        "加载",
+        "空状态",
+        "错误重试"
+      ],
+      "dimensions": [
+        "accuracy",
+        "coverage",
+        "clarity"
+      ],
+      "guidance": "接受意思一致的正确表达，不按是否逐字命中关键词机械评分"
+    },
+    "question_version": "question-v1",
+    "dataset_version": "demo-v1",
+    "is_active": true,
+    "is_demo": true
+  },
+  {
+    "code": "Q-FRONTEND-006",
+    "category": "frontend",
+    "difficulty": 2,
+    "prompt": "如何避免用户双击提交造成重复保存？",
+    "reference_answer": "提交中禁用并显示状态，服务端仍需幂等或唯一约束；前端控制不是最终一致性保障。",
+    "rubric": {
+      "expected_points": [
+        "提交状态",
+        "后端幂等",
+        "边界"
+      ],
+      "dimensions": [
+        "accuracy",
+        "coverage",
+        "clarity"
+      ],
+      "guidance": "接受意思一致的正确表达，不按是否逐字命中关键词机械评分"
+    },
+    "question_version": "question-v1",
+    "dataset_version": "demo-v1",
+    "is_active": true,
+    "is_demo": true
+  },
+  {
+    "code": "Q-FRONTEND-007",
+    "category": "frontend",
+    "difficulty": 2,
+    "prompt": "快速切换筛选条件时，旧请求后返回怎么办？",
+    "reference_answer": "取消旧请求或使用请求序号，只应用当前筛选对应的结果，卸载时清理状态。",
+    "rubric": {
+      "expected_points": [
+        "竞态",
+        "请求序号",
+        "取消"
+      ],
+      "dimensions": [
+        "accuracy",
+        "coverage",
+        "clarity"
+      ],
+      "guidance": "接受意思一致的正确表达，不按是否逐字命中关键词机械评分"
+    },
+    "question_version": "question-v1",
+    "dataset_version": "demo-v1",
+    "is_active": true,
+    "is_demo": true
+  },
+  {
+    "code": "Q-FRONTEND-008",
+    "category": "frontend",
+    "difficulty": 2,
+    "prompt": "如何在刷新后恢复一场已保存的面试？",
+    "reference_answer": "用会话ID重新读取服务端状态，恢复已提交答案和当前题；区分未保存本地输入。",
+    "rubric": {
+      "expected_points": [
+        "会话ID",
+        "服务端状态",
+        "未保存输入"
+      ],
+      "dimensions": [
+        "accuracy",
+        "coverage",
+        "clarity"
+      ],
+      "guidance": "接受意思一致的正确表达，不按是否逐字命中关键词机械评分"
+    },
+    "question_version": "question-v1",
+    "dataset_version": "demo-v1",
+    "is_active": true,
+    "is_demo": true
+  },
+  {
+    "code": "Q-FRONTEND-009",
+    "category": "frontend",
+    "difficulty": 3,
+    "prompt": "设计一个会等待AI结果的推荐页面。",
+    "reference_answer": "先显示已保存的排名和证据，区分AI处理中与失败；按业务ID获取结果，避免刷新再次计费。",
+    "rubric": {
+      "expected_points": [
+        "业务ID",
+        "状态区分",
+        "重复调用"
+      ],
+      "dimensions": [
+        "accuracy",
+        "coverage",
+        "clarity"
+      ],
+      "guidance": "接受意思一致的正确表达，不按是否逐字命中关键词机械评分"
+    },
+    "question_version": "question-v1",
+    "dataset_version": "demo-v1",
+    "is_active": true,
+    "is_demo": true
+  },
+  {
+    "code": "Q-FRONTEND-010",
+    "category": "frontend",
+    "difficulty": 3,
+    "prompt": "如何验证一个响应式表单在手机上可用？",
+    "reference_answer": "测试不同宽度、键盘遮挡、焦点与错误提示；确认按钮可操作，不能仅凭桌面缩放截图。",
+    "rubric": {
+      "expected_points": [
+        "视口",
+        "键盘",
+        "操作验证"
+      ],
+      "dimensions": [
+        "accuracy",
+        "coverage",
+        "clarity"
+      ],
+      "guidance": "接受意思一致的正确表达，不按是否逐字命中关键词机械评分"
+    },
+    "question_version": "question-v1",
+    "dataset_version": "demo-v1",
+    "is_active": true,
+    "is_demo": true
+  },
+  {
+    "code": "Q-DATA-001",
+    "category": "data",
+    "difficulty": 1,
+    "prompt": "数据中的缺失值和数字0有什么区别？",
+    "reference_answer": "缺失表示未知或未采集，0表示已观测为零；统计和填补前需明确业务含义。",
+    "rubric": {
+      "expected_points": [
+        "未知",
+        "观测零",
+        "口径"
+      ],
+      "dimensions": [
+        "accuracy",
+        "coverage",
+        "clarity"
+      ],
+      "guidance": "接受意思一致的正确表达，不按是否逐字命中关键词机械评分"
+    },
+    "question_version": "question-v1",
+    "dataset_version": "demo-v1",
+    "is_active": true,
+    "is_demo": true
+  },
+  {
+    "code": "Q-DATA-002",
+    "category": "data",
+    "difficulty": 1,
+    "prompt": "SQL的INNER JOIN与LEFT JOIN有什么区别？",
+    "reference_answer": "内连接只保留匹配行；左连接保留左表行，无匹配右侧为空；注意一对多重复。",
+    "rubric": {
+      "expected_points": [
+        "匹配",
+        "保留左表",
+        "重复"
+      ],
+      "dimensions": [
+        "accuracy",
+        "coverage",
+        "clarity"
+      ],
+      "guidance": "接受意思一致的正确表达，不按是否逐字命中关键词机械评分"
+    },
+    "question_version": "question-v1",
+    "dataset_version": "demo-v1",
+    "is_active": true,
+    "is_demo": true
+  },
+  {
+    "code": "Q-DATA-003",
+    "category": "data",
+    "difficulty": 1,
+    "prompt": "使用pandas读取文件后首先检查哪些内容？",
+    "reference_answer": "检查行列、类型、缺失、重复、取值范围和编码；不要直接对脏数据计算结论。",
+    "rubric": {
+      "expected_points": [
+        "类型",
+        "缺失重复",
+        "范围"
+      ],
+      "dimensions": [
+        "accuracy",
+        "coverage",
+        "clarity"
+      ],
+      "guidance": "接受意思一致的正确表达，不按是否逐字命中关键词机械评分"
+    },
+    "question_version": "question-v1",
+    "dataset_version": "demo-v1",
+    "is_active": true,
+    "is_demo": true
+  },
+  {
+    "code": "Q-DATA-004",
+    "category": "data",
+    "difficulty": 1,
+    "prompt": "均值和中位数各在什么情况下更有参考价值？",
+    "reference_answer": "均值利用所有值但易受极端值影响，中位数对偏态和异常较稳健；应结合分布解释。",
+    "rubric": {
+      "expected_points": [
+        "极端值",
+        "偏态",
+        "分布"
+      ],
+      "dimensions": [
+        "accuracy",
+        "coverage",
+        "clarity"
+      ],
+      "guidance": "接受意思一致的正确表达，不按是否逐字命中关键词机械评分"
+    },
+    "question_version": "question-v1",
+    "dataset_version": "demo-v1",
+    "is_active": true,
+    "is_demo": true
+  },
+  {
+    "code": "Q-DATA-005",
+    "category": "data",
+    "difficulty": 2,
+    "prompt": "如何清洗同一岗位的重复数据？",
+    "reference_answer": "先定义业务键和标准化规则，保留来源与时间，检查相似项，避免仅因同名删除不同岗位。",
+    "rubric": {
+      "expected_points": [
+        "业务键",
+        "标准化",
+        "保留来源"
+      ],
+      "dimensions": [
+        "accuracy",
+        "coverage",
+        "clarity"
+      ],
+      "guidance": "接受意思一致的正确表达，不按是否逐字命中关键词机械评分"
+    },
+    "question_version": "question-v1",
+    "dataset_version": "demo-v1",
+    "is_active": true,
+    "is_demo": true
+  },
+  {
+    "code": "Q-DATA-006",
+    "category": "data",
+    "difficulty": 2,
+    "prompt": "制作按月统计的图表时需要统一哪些口径？",
+    "reference_answer": "统一时间字段、时区、计量单位、去重和缺失处理；注明数据截止日及范围。",
+    "rubric": {
+      "expected_points": [
+        "时间",
+        "单位",
+        "去重缺失"
+      ],
+      "dimensions": [
+        "accuracy",
+        "coverage",
+        "clarity"
+      ],
+      "guidance": "接受意思一致的正确表达，不按是否逐字命中关键词机械评分"
+    },
+    "question_version": "question-v1",
+    "dataset_version": "demo-v1",
+    "is_active": true,
+    "is_demo": true
+  },
+  {
+    "code": "Q-DATA-007",
+    "category": "data",
+    "difficulty": 2,
+    "prompt": "如何验证两个报表中的人数差异？",
+    "reference_answer": "比较人群范围、去重主键、过滤、日期和连接方式，逐层对账并检查样例。",
+    "rubric": {
+      "expected_points": [
+        "范围",
+        "过滤",
+        "逐层对账"
+      ],
+      "dimensions": [
+        "accuracy",
+        "coverage",
+        "clarity"
+      ],
+      "guidance": "接受意思一致的正确表达，不按是否逐字命中关键词机械评分"
+    },
+    "question_version": "question-v1",
+    "dataset_version": "demo-v1",
+    "is_active": true,
+    "is_demo": true
+  },
+  {
+    "code": "Q-DATA-008",
+    "category": "data",
+    "difficulty": 2,
+    "prompt": "为什么不能把外链点击数直接称为投递人数？",
+    "reference_answer": "点击不证明完成投递；人数还需按用户去重；应区分观测事件与业务结果。",
+    "rubric": {
+      "expected_points": [
+        "事件区别",
+        "人数去重",
+        "结果证据"
+      ],
+      "dimensions": [
+        "accuracy",
+        "coverage",
+        "clarity"
+      ],
+      "guidance": "接受意思一致的正确表达，不按是否逐字命中关键词机械评分"
+    },
+    "question_version": "question-v1",
+    "dataset_version": "demo-v1",
+    "is_active": true,
+    "is_demo": true
+  },
+  {
+    "code": "Q-DATA-009",
+    "category": "data",
+    "difficulty": 3,
+    "prompt": "如何避免用未来数据帮助预测过去造成的评估偏差？",
+    "reference_answer": "按时间划分训练和测试，选参及缺失处理仅使用当时可得数据，报告真实留出表现。",
+    "rubric": {
+      "expected_points": [
+        "时间切分",
+        "泄漏",
+        "留出"
+      ],
+      "dimensions": [
+        "accuracy",
+        "coverage",
+        "clarity"
+      ],
+      "guidance": "接受意思一致的正确表达，不按是否逐字命中关键词机械评分"
+    },
+    "question_version": "question-v1",
+    "dataset_version": "demo-v1",
+    "is_active": true,
+    "is_demo": true
+  },
+  {
+    "code": "Q-DATA-010",
+    "category": "data",
+    "difficulty": 3,
+    "prompt": "如何判断模型生成的测试数据能支持什么结论？",
+    "reference_answer": "可验证格式、流程和已设计边界，不能替代真实分布或效果研究；需要独立真实数据和人工评价。",
+    "rubric": {
+      "expected_points": [
+        "功能验证",
+        "真实分布",
+        "独立评价"
+      ],
+      "dimensions": [
+        "accuracy",
+        "coverage",
+        "clarity"
+      ],
+      "guidance": "接受意思一致的正确表达，不按是否逐字命中关键词机械评分"
+    },
+    "question_version": "question-v1",
+    "dataset_version": "demo-v1",
+    "is_active": true,
+    "is_demo": true
+  }
+]

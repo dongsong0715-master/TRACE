@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "dataset_version": "demo-v1",
+  "created_on": "2026-10-05",
+  "is_demo": true,
+  "generation_method": "由当前对话模型起草题目、岗位模板与规则，使用本地脚本确定性展开岗位并保存；未调用外部付费API生成这些文件。",
+  "counts": {
+    "jobs": 30,
+    "interview_questions": 30,
+    "diagnosis_questions": 10,
+    "profiles": 6,
+    "validation_cases": 14
+  },
+  "files": {
+    "jobs.json": "bde1423c6a71a7d5daf99692dd09b68e2f47fc26ac93db058cd0a99149105e6b",
+    "interview_questions.json": "954f63a2337db54f1e81d37fff9cc320728d79953ae1a204ad84bbe3cf350c2f",
+    "diagnosis_template.json": "3694f98236586f41e7553f655996e4e5dd2c61758f4c8f11772907f7a4b75adc",
+    "rules.json": "fdc4a2078cf2ad68cc6fa2a4288d598e1818eb946dbc07a3b9ea44acc4202c55",
+    "demo_profiles.json": "e765e78ca0cb8185666056ff6e9834981e5744c91c9edc476531f1307ff96839",
+    "validation_cases.json": "e298c5dbbfd0c1ed20c6d6a03ece121b6c44e796322be10dee8575d2ece3a1c5"
+  }
+}

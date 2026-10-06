@@ -1,0 +1,15 @@
+:root {
+  --color-ink: #111b2e;
+  --color-paper: #ffffff;
+  --color-muted: #5a6982;
+  --color-rule: #dce3ec;
+  --color-soft: #f6f8fb;
+  --color-signal: #0866ff;
+  --color-signal-hover: #0054db;
+  --color-tint: #eff5ff;
+  --color-error: #bc121b;
+  --font-ui: 'Helvetica Neue', 'Microsoft YaHei UI', 'PingFang SC', 'Noto Sans SC', sans-serif;
+  --font-number: 'Helvetica Neue', 'Segoe UI', sans-serif;
+  --space-section: 48px;
+  --radius-control: 6px;
+}

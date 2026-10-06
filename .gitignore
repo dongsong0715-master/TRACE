@@ -1,0 +1,43 @@
+# Local dependencies and outputs
+.venv/
+node_modules/
+dist/
+*.egg-info/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.tsbuildinfo
+test-results/
+playwright-report/
+.cache/
+/.superpowers/
+# Credentials / developer state
+.env
+.env.*
+!.env.example
+*.db
+*.db-*
+*.sqlite*
+*.log
+# Research source contains personal information; keep locally
+/附件*.docx
+# Public repository uses the Markdown plan with role-based assignments.
+/docs/TRACE需求分析与开发文档.docx
+/docs/.work/
+/design/
+/docs/design/style-*.png
+/docs/design/implementation-*-v*.*
+/docs/design/comparison-v*.png
+/docs/design/login-employment-mobile-v*.jpg
+# User requested screenshots and comparison material stay local.
+/docs/design/*.png
+/docs/design/*.jpg
+/docs/design/*.jpeg
+/design-qa.md
+# Historical prompt conflicts with the confirmed frontend; keep local until revised.
+/docs/前端页面生成提示词.md
+/artifacts/indexes/*
+!/artifacts/indexes/.gitkeep
+.DS_Store
+Thumbs.db

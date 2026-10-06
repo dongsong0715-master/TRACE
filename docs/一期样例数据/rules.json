@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "version": "rules-v1",
+  "status": "draft_for_demo",
+  "is_demo": true,
+  "provenance": "由模型起草并固化为一期开发规则，未经真实业务标定",
+  "categories": {
+    "python": {
+      "label": "Python开发",
+      "skills": [
+        "python",
+        "sql",
+        "fastapi",
+        "git",
+        "linux"
+      ]
+    },
+    "frontend": {
+      "label": "Web前端",
+      "skills": [
+        "javascript",
+        "typescript",
+        "vue",
+        "html_css",
+        "git"
+      ]
+    },
+    "data": {
+      "label": "数据分析",
+      "skills": [
+        "python",
+        "sql",
+        "pandas",
+        "excel",
+        "visualization"
+      ]
+    }
+  },
+  "diagnosis": {
+    "template_version": "diagnosis-v1",
+    "skill_levels": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "dimensions": {
+      "technical": "mean(Q04)/3*100",
+      "project": "Q05/3*100",
+      "expression": "Q06/3*100",
+      "learning": "Q07/3*100"
+    },
+    "rounding": "ROUND_HALF_UP",
+    "decimal_places": 1,
+    "advice_bands": [
+      {
+        "min": 0,
+        "max_exclusive": 40,
+        "text": "先补基础并完成入门练习"
+      },
+      {
+        "min": 40,
+        "max_exclusive": 70,
+        "text": "完成一个可展示练习并整理过程"
+      },
+      {
+        "min": 70,
+        "max_inclusive": 100,
+        "text": "用项目与面试进一步验证自报水平"
+      }
+    ]
+  },
+  "recommendation": {
+    "limit": 5,
+    "initial_chunks": 30,
+    "max_chunks": 60,
+    "max_evidence_per_job": 2,
+    "weights": {
+      "semantic": 0.6,
+      "skill_match": 0.3,
+      "city_match": 0.1
+    },
+    "mastered_level_min": 2,
+    "missing_skill_policy": "unconfirmed",
+    "explicit_low_skill_policy": "gap",
+    "empty_required_skills": "reject_import",
+    "tie_break": "job_code_ascending",
+    "score_is_probability": false
+  },
+  "interview": {
+    "main_questions": 5,
+    "difficulty_sequence": [
+      1,
+      1,
+      2,
+      2,
+      3
+    ],
+    "followups": false,
+    "weights": {
+      "accuracy": 0.5,
+      "coverage": 0.3,
+      "clarity": 0.2
+    },
+    "skipped_score": 0,
+    "failed_score": null,
+    "max_answer_chars": 2000,
+    "rounding": "ROUND_HALF_UP",
+    "decimal_places": 1
+  },
+  "ai": {
+    "timeout_seconds": 30,
+    "stale_seconds": 60,
+    "max_attempts": 2,
+    "auto_retry": false,
+    "daily_recommendation_attempts": 3,
+    "daily_interview_attempts": 2
+  },
+  "applications": {
+    "states": [
+      "submitted",
+      "interviewing",
+      "offer",
+      "rejected",
+      "withdrawn"
+    ],
+    "allow_owner_correction": true,
+    "source_type": "self_reported"
+  }
+}

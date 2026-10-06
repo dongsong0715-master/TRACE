@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "version": "diagnosis-v1",
+  "is_demo": true,
+  "questions": [
+    {
+      "id": "Q01",
+      "label": "你希望优先了解哪类岗位",
+      "type": "enum",
+      "required": true,
+      "options": [
+        "python",
+        "frontend",
+        "data"
+      ]
+    },
+    {
+      "id": "Q02",
+      "label": "意向城市，留空表示不限",
+      "type": "string_array",
+      "required": true,
+      "max_items": 3
+    },
+    {
+      "id": "Q03",
+      "label": "当前学历层次",
+      "type": "enum",
+      "required": true,
+      "options": [
+        "college",
+        "bachelor",
+        "master"
+      ]
+    },
+    {
+      "id": "Q04",
+      "label": "对目标类别的5项技能逐项自评",
+      "type": "skill_map",
+      "required": true,
+      "keys_from": "categories[Q01].skills",
+      "levels": {
+        "0": "尚未学习",
+        "1": "了解概念",
+        "2": "能完成基础任务",
+        "3": "能独立应用"
+      }
+    },
+    {
+      "id": "Q05",
+      "label": "项目实践水平",
+      "type": "integer",
+      "required": true,
+      "min": 0,
+      "max": 3,
+      "value_labels": {
+        "0": "无项目",
+        "1": "课程案例",
+        "2": "独立模块",
+        "3": "完整项目"
+      }
+    },
+    {
+      "id": "Q06",
+      "label": "描述技术问题时的表达水平",
+      "type": "integer",
+      "required": true,
+      "min": 0,
+      "max": 3,
+      "value_labels": {
+        "0": "难以说明",
+        "1": "简单说明",
+        "2": "较清楚",
+        "3": "结构清楚"
+      }
+    },
+    {
+      "id": "Q07",
+      "label": "自主学习水平",
+      "type": "integer",
+      "required": true,
+      "min": 0,
+      "max": 3,
+      "value_labels": {
+        "0": "依赖讲解",
+        "1": "跟随教程",
+        "2": "查资料解决",
+        "3": "总结迁移"
+      }
+    },
+    {
+      "id": "Q08",
+      "label": "目标工作类型",
+      "type": "enum",
+      "required": true,
+      "options": [
+        "internship",
+        "full_time",
+        "any"
+      ]
+    },
+    {
+      "id": "Q09",
+      "label": "每周可投入学习的小时数",
+      "type": "integer",
+      "required": true,
+      "min": 0,
+      "max": 40
+    },
+    {
+      "id": "Q10",
+      "label": "简述一个项目或学习目标",
+      "type": "string",
+      "required": false,
+      "max_length": 500
+    }
+  ]
+}

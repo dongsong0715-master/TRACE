@@ -1,0 +1,152 @@
+[
+  {
+    "code": "PROFILE-1-1",
+    "nickname": "演示同学1-1",
+    "is_demo": true,
+    "dataset_version": "demo-v1",
+    "answers": {
+      "Q01": "python",
+      "Q02": [
+        "北京"
+      ],
+      "Q03": "bachelor",
+      "Q04": {
+        "python": 3,
+        "sql": 2,
+        "fastapi": 1,
+        "git": 0,
+        "linux": 0
+      },
+      "Q05": 2,
+      "Q06": 1,
+      "Q07": 3,
+      "Q08": "any",
+      "Q09": 8,
+      "Q10": "希望完成一个Python开发课程项目并说明个人工作。"
+    }
+  },
+  {
+    "code": "PROFILE-1-2",
+    "nickname": "演示同学1-2",
+    "is_demo": true,
+    "dataset_version": "demo-v1",
+    "answers": {
+      "Q01": "python",
+      "Q02": [],
+      "Q03": "bachelor",
+      "Q04": {
+        "python": 3,
+        "sql": 3,
+        "fastapi": 2,
+        "git": 2,
+        "linux": 2
+      },
+      "Q05": 3,
+      "Q06": 2,
+      "Q07": 3,
+      "Q08": "any",
+      "Q09": 12,
+      "Q10": "希望完成一个Python开发课程项目并说明个人工作。"
+    }
+  },
+  {
+    "code": "PROFILE-2-1",
+    "nickname": "演示同学2-1",
+    "is_demo": true,
+    "dataset_version": "demo-v1",
+    "answers": {
+      "Q01": "frontend",
+      "Q02": [
+        "北京"
+      ],
+      "Q03": "bachelor",
+      "Q04": {
+        "javascript": 3,
+        "typescript": 2,
+        "vue": 1,
+        "html_css": 0,
+        "git": 0
+      },
+      "Q05": 2,
+      "Q06": 1,
+      "Q07": 3,
+      "Q08": "any",
+      "Q09": 8,
+      "Q10": "希望完成一个Web前端课程项目并说明个人工作。"
+    }
+  },
+  {
+    "code": "PROFILE-2-2",
+    "nickname": "演示同学2-2",
+    "is_demo": true,
+    "dataset_version": "demo-v1",
+    "answers": {
+      "Q01": "frontend",
+      "Q02": [],
+      "Q03": "bachelor",
+      "Q04": {
+        "javascript": 3,
+        "typescript": 3,
+        "vue": 2,
+        "html_css": 2,
+        "git": 2
+      },
+      "Q05": 3,
+      "Q06": 2,
+      "Q07": 3,
+      "Q08": "any",
+      "Q09": 12,
+      "Q10": "希望完成一个Web前端课程项目并说明个人工作。"
+    }
+  },
+  {
+    "code": "PROFILE-3-1",
+    "nickname": "演示同学3-1",
+    "is_demo": true,
+    "dataset_version": "demo-v1",
+    "answers": {
+      "Q01": "data",
+      "Q02": [
+        "北京"
+      ],
+      "Q03": "bachelor",
+      "Q04": {
+        "python": 3,
+        "sql": 2,
+        "pandas": 1,
+        "excel": 0,
+        "visualization": 0
+      },
+      "Q05": 2,
+      "Q06": 1,
+      "Q07": 3,
+      "Q08": "any",
+      "Q09": 8,
+      "Q10": "希望完成一个数据分析课程项目并说明个人工作。"
+    }
+  },
+  {
+    "code": "PROFILE-3-2",
+    "nickname": "演示同学3-2",
+    "is_demo": true,
+    "dataset_version": "demo-v1",
+    "answers": {
+      "Q01": "data",
+      "Q02": [],
+      "Q03": "bachelor",
+      "Q04": {
+        "python": 3,
+        "sql": 3,
+        "pandas": 2,
+        "excel": 2,
+        "visualization": 2
+      },
+      "Q05": 3,
+      "Q06": 2,
+      "Q07": 3,
+      "Q08": "any",
+      "Q09": 12,
+      "Q10": "希望完成一个数据分析课程项目并说明个人工作。"
+    }
+  }
+]

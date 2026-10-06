@@ -1,0 +1,6 @@
+* text=auto eol=lf
+*.png binary
+*.docx binary
+# Frozen dataset hashes include original line endings; preserve their exact bytes.
+data/**/*.json -text
+docs/一期样例数据/*.json -text
